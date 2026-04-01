@@ -265,6 +265,33 @@
     }
     .step p { font-size: 0.87rem; line-height: 1.65; color: var(--grey); }
 
+    /* ── WHAT'S INSIDE ── */
+    #inside { padding-top: 80px; }
+    .inside-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .inside-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: white; border: 1px solid var(--border);
+      border-radius: 14px; padding: 18px 20px;
+    }
+    .inside-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .inside-item div { display: flex; flex-direction: column; gap: 3px; }
+    .inside-item strong { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+    .inside-item span { font-size: 0.83rem; color: var(--grey); line-height: 1.5; }
+    .coming-soon-note {
+      text-align: center; font-size: 0.82rem; color: var(--grey);
+      padding: 14px 20px;
+      background: rgba(0,105,92,0.05); border: 1px solid rgba(0,105,92,0.12);
+      border-radius: 12px;
+    }
+    @media (max-width: 768px) {
+      .inside-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── FOUNDING CTA ── */
     #founding {
       padding-top: 80px; padding-bottom: 96px;
@@ -399,8 +426,8 @@
         <span class="dot"></span>
         <span data-en="Coming 2026 · iOS & Android" data-ru="Выходим в 2026 · iOS и Android">Coming 2026 · iOS & Android</span>
       </div>
-      <h1 data-en="Habits that fit <em>your life</em>,<br>not the other way around." data-ru="Привычки, которые<br>подстраиваются под <em>твою жизнь</em>.">Habits that fit <em>your life</em>,<br>not the other way around.</h1>
-      <p class="hero-sub" data-en="Most habit apps fail you when life gets messy. Mosaic's AI coach adapts to your day — so you keep going, even when the plan changes." data-ru="Большинство приложений ломаются, когда жизнь ломает планы. AI-коуч Mosaic адаптируется к твоему дню — ты продолжаешь, даже когда всё пошло не так.">Most habit apps fail you when life gets messy. Mosaic's AI coach adapts to your day — so you keep going, even when the plan changes.</p>
+      <h1 data-en="Progress that survives<br><em>real life</em>." data-ru="Прогресс, который выживает<br>в <em>реальной жизни</em>.">Progress that survives<br><em>real life</em>.</h1>
+      <p class="hero-sub" data-en="Most habit apps punish you for missing a day. Mosaic measures momentum, not streaks — and gives you an AI coach that actually remembers who you are." data-ru="Большинство приложений наказывают за пропущенный день. Mosaic измеряет моментум, а не серии — и даёт тебе AI-коуча, который по-настоящему тебя помнит.">Most habit apps punish you for missing a day. Mosaic measures momentum, not streaks — and gives you an AI coach that actually remembers who you are.</p>
       <form class="waitlist-form" id="hero-form" onsubmit="submitForm(event, 'hero')">
         <input type="email" id="hero-email" placeholder="your@email.com" required />
         <button type="submit" class="btn-primary" data-en="Join the Waitlist →" data-ru="Вступить в список →">Join the Waitlist →</button>
@@ -473,22 +500,22 @@
 <section id="solution">
   <div class="container">
     <p class="section-label" data-en="Why Mosaic is different" data-ru="Почему Mosaic — иначе">Why Mosaic is different</p>
-    <h2 data-en="An AI coach that <em>actually</em> knows you." data-ru="AI-коуч, который <em>по-настоящему</em> тебя знает.">An AI coach that <em>actually</em> knows you.</h2>
+    <h2 data-en="Built different.<br><em>Actually</em> different." data-ru="Сделано иначе.<br><em>По-настоящему</em> иначе.">Built different.<br><em>Actually</em> different.</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <div class="feature-icon">🧠</div>
-        <h3 data-en="Adaptive AI Coach" data-ru="Адаптивный AI-коуч">Adaptive AI Coach</h3>
-        <p data-en="Your coach learns your patterns — when you're most productive, when life gets in the way — and adjusts your plan in real time, not next week." data-ru="Коуч изучает твои паттерны — когда ты продуктивен, когда жизнь мешает — и адаптирует план в реальном времени, а не на следующей неделе.">Your coach learns your patterns — when you're most productive, when life gets in the way — and adjusts your plan in real time, not next week.</p>
+        <h3 data-en="AI Coach That Remembers" data-ru="AI-коуч, который помнит">AI Coach That Remembers</h3>
+        <p data-en="Every conversation stays in context. Your coach knows your goals, your struggles, your wins — and builds on them every time you chat. Not a blank slate, every single day." data-ru="Каждый разговор остаётся в контексте. Коуч знает твои цели, трудности, победы — и опирается на них каждый раз. Не чистый лист каждый день.">Every conversation stays in context. Your coach knows your goals, your struggles, your wins — and builds on them every time you chat. Not a blank slate, every single day.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">💫</div>
-        <h3 data-en="Flexible Momentum™" data-ru="Гибкий Моментум™">Flexible Momentum™</h3>
-        <p data-en="Miss a day without losing everything. Your progress is measured in momentum, not streaks — so one hard day doesn't erase two months of work." data-ru="Пропусти день, не потеряв всего. Прогресс измеряется в моментуме, не в сериях — один трудный день не перечёркивает два месяца работы.">Miss a day without losing everything. Your progress is measured in momentum, not streaks — so one hard day doesn't erase two months of work.</p>
+        <h3 data-en="Momentum, Not Streaks" data-ru="Моментум, не серии">Momentum, Not Streaks</h3>
+        <p data-en="Miss a day without losing everything. Progress is measured over weeks, not broken by a single bad day. The app works with your real life — not against it." data-ru="Пропусти день — не потеряй всё. Прогресс измеряется неделями, а не ломается от одного плохого дня. Приложение работает с твоей реальной жизнью, а не против неё.">Miss a day without losing everything. Progress is measured over weeks, not broken by a single bad day. The app works with your real life — not against it.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📅</div>
-        <h3 data-en="Calendar-Aware" data-ru="Синхронизация с жизнью">Calendar-Aware</h3>
-        <p data-en="Mosaic syncs with your calendar and health data to suggest the right habit at the right moment — not just at 8am every single day." data-ru="Mosaic синхронизируется с твоим календарём и данными о здоровье, чтобы предложить нужную привычку в нужный момент — а не просто в 8 утра каждый день.">Mosaic syncs with your calendar and health data to suggest the right habit at the right moment — not just at 8am every single day.</p>
+        <div class="feature-icon">🔗</div>
+        <h3 data-en="Life Correlation Engine" data-ru="Связи в твоей жизни">Life Correlation Engine</h3>
+        <p data-en="Mosaic finds the hidden patterns between your habits and your mood. See which habits actually make you feel better — backed by your own 30-day data, not generic advice." data-ru="Mosaic находит скрытые связи между твоими привычками и настроением. Видишь, какие привычки реально улучшают твоё состояние — на основе твоих данных за 30 дней, а не общих советов.">Mosaic finds the hidden patterns between your habits and your mood. See which habits actually make you feel better — backed by your own 30-day data, not generic advice.</p>
       </div>
     </div>
   </div>
@@ -504,22 +531,79 @@
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3 data-en="Start with 3 habits" data-ru="Начни с 3 привычек">Start with 3 habits</h3>
-        <p data-en="Not ten. Not twenty. Research shows that starting small is the only way that actually works long-term. Mosaic won't let you overload yourself." data-ru="Не десять. Не двадцать. Исследования показывают: начинать с малого — единственный способ, который работает долгосрочно. Mosaic не даст тебе перегрузиться.">Not ten. Not twenty. Research shows that starting small is the only way that actually works long-term. Mosaic won't let you overload yourself.</p>
+        <h3 data-en="Pick your habits" data-ru="Выбери привычки">Pick your habits</h3>
+        <p data-en="Browse 50+ templates or create your own. Start with a few — Mosaic will help you not overload yourself from day one." data-ru="Просмотри 50+ шаблонов или создай свои. Начни с малого — Mosaic поможет не перегрузить себя с первого дня.">Browse 50+ templates or create your own. Start with a few — Mosaic will help you not overload yourself from day one.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3 data-en="Your AI learns your life" data-ru="AI изучает твою жизнь">Your AI learns your life</h3>
-        <p data-en="Over the first two weeks, Mosaic observes your patterns — sleep, schedule, check-in times — and begins adapting your reminders and suggestions accordingly." data-ru="В первые две недели Mosaic наблюдает за твоими паттернами — сном, расписанием, временем чекинов — и начинает адаптировать напоминания и подсказки.">Over the first two weeks, Mosaic observes your patterns — sleep, schedule, check-in times — and begins adapting your reminders and suggestions accordingly.</p>
+        <h3 data-en="Check in, track your mood" data-ru="Чекинься, следи за настроением">Check in, track your mood</h3>
+        <p data-en="Each day: mark habits done, log how you feel. Mosaic builds a picture of your real life — and your AI coach remembers all of it across every conversation." data-ru="Каждый день: отмечай привычки, записывай настроение. Mosaic строит картину твоей реальной жизни — а AI-коуч помнит всё это в каждом разговоре.">Each day: mark habits done, log how you feel. Mosaic builds a picture of your real life — and your AI coach remembers all of it across every conversation.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3 data-en="Stay consistent — for real" data-ru="Настоящее постоянство">Stay consistent — for real</h3>
-        <p data-en="No more guilt, no more streaks to protect. Just a quiet, intelligent companion helping you keep going — through busy weeks, travel, and life's surprises." data-ru="Никакой вины, никаких серий для защиты. Только тихий умный компаньон, который помогает тебе продолжать — через занятые недели, поездки и сюрпризы жизни.">No more guilt, no more streaks to protect. Just a quiet, intelligent companion helping you keep going — through busy weeks, travel, and life's surprises.</p>
+        <h3 data-en="Discover what works for you" data-ru="Узнай, что работает для тебя">Discover what works for you</h3>
+        <p data-en="After a few weeks, Mosaic shows you correlations: which habits move your mood, where your momentum lives, what patterns make you thrive. Insights no other app gives you." data-ru="Через несколько недель Mosaic покажет связи: какие привычки влияют на настроение, где живёт твой моментум, какие паттерны делают тебя продуктивным. Инсайты, которых нет ни в одном другом приложении.">After a few weeks, Mosaic shows you correlations: which habits move your mood, where your momentum lives, what patterns make you thrive. Insights no other app gives you.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ── WHAT'S INSIDE ─────────────────────────────────────── -->
+<section id="inside">
+  <div class="container">
+    <p class="section-label" data-en="What's inside" data-ru="Что внутри">What's inside</p>
+    <h2 data-en="Built and ready today." data-ru="Готово уже сейчас.">Built and ready today.</h2>
+    <div class="inside-grid">
+      <div class="inside-item">
+        <span class="inside-icon">✅</span>
+        <div>
+          <strong data-en="Habit tracking" data-ru="Трекинг привычек">Habit tracking</strong>
+          <span data-en="50+ templates, custom habits, daily check-ins" data-ru="50+ шаблонов, кастомные привычки, ежедневные чекины">50+ templates, custom habits, daily check-ins</span>
+        </div>
+      </div>
+      <div class="inside-item">
+        <span class="inside-icon">✅</span>
+        <div>
+          <strong data-en="Momentum score" data-ru="Моментум-скор">Momentum score</strong>
+          <span data-en="Progress measured in consistency, not brittle streaks" data-ru="Прогресс в постоянстве, не в хрупких сериях">Progress measured in consistency, not brittle streaks</span>
+        </div>
+      </div>
+      <div class="inside-item">
+        <span class="inside-icon">✅</span>
+        <div>
+          <strong data-en="AI Coach with memory" data-ru="AI-коуч с памятью">AI Coach with memory</strong>
+          <span data-en="Remembers every conversation, gives personalised advice" data-ru="Помнит каждый разговор, даёт персональные советы">Remembers every conversation, gives personalised advice</span>
+        </div>
+      </div>
+      <div class="inside-item">
+        <span class="inside-icon">✅</span>
+        <div>
+          <strong data-en="Mood tracking" data-ru="Трекинг настроения">Mood tracking</strong>
+          <span data-en="Daily mood log, linked to habit data" data-ru="Ежедневный лог настроения, связанный с привычками">Daily mood log, linked to habit data</span>
+        </div>
+      </div>
+      <div class="inside-item">
+        <span class="inside-icon">✅</span>
+        <div>
+          <strong data-en="Life Correlations" data-ru="Корреляции жизни">Life Correlations</strong>
+          <span data-en="Which habits improve your mood — shown with real data" data-ru="Какие привычки улучшают твоё настроение — видно на данных">Which habits improve your mood — shown with real data</span>
+        </div>
+      </div>
+      <div class="inside-item">
+        <span class="inside-icon">✅</span>
+        <div>
+          <strong data-en="Analytics &amp; heatmap" data-ru="Аналитика и тепловая карта">Analytics &amp; heatmap</strong>
+          <span data-en="Weekly stats, momentum history, consistency calendar" data-ru="Недельная статистика, история моментума, календарь постоянства">Weekly stats, momentum history, consistency calendar</span>
+        </div>
+      </div>
+    </div>
+    <p class="coming-soon-note">
+      <span data-en="Coming soon: Health data sync, adaptive day scheduling, full paywall &amp; subscription tiers." data-ru="Скоро: синхронизация с Apple/Google Health, адаптивное расписание дня, подписки и тарифы.">Coming soon: Health data sync, adaptive day scheduling, full paywall &amp; subscription tiers.</span>
+    </p>
+  </div>
+</section>
+
+<hr class="section-divider" style="margin-top:80px;" />
 
 <!-- ── FOUNDING CTA ──────────────────────────────────────── -->
 <section id="founding">
@@ -530,19 +614,19 @@
         <span data-en="Founding Member Offer" data-ru="Предложение для основателей">Founding Member Offer</span>
       </div>
       <h2 data-en="Be among the first.<br>Pay less, forever." data-ru="Будь среди первых.<br>Платить меньше — навсегда.">Be among the first.<br>Pay less, forever.</h2>
-      <p data-en="The first 500 people on the waitlist get founding member pricing — a permanent discount that stays with you even as we grow. No catch." data-ru="Первые 500 человек в списке получат цену для основателей — постоянную скидку, которая остаётся с тобой по мере нашего роста. Без условий.">The first 500 people on the waitlist get founding member pricing — a permanent discount that stays with you even as we grow. No catch.</p>
+      <p data-en="The first 500 people on the waitlist get founding member pricing — a permanent discount locked in for life. We launch when it's ready. You're first to know." data-ru="Первые 500 человек в списке получат цену основателей — постоянную скидку, зафиксированную навсегда. Мы запускаемся, когда всё готово. Ты узнаешь первым.">The first 500 people on the waitlist get founding member pricing — a permanent discount locked in for life. We launch when it's ready. You're first to know.</p>
       <div class="perks">
         <span class="perk">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span data-en="50% off at launch, forever" data-ru="−50% при запуске навсегда">50% off at launch, forever</span>
+          <span data-en="50% off at launch, locked forever" data-ru="−50% при запуске — навсегда">50% off at launch, locked forever</span>
         </span>
         <span class="perk">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span data-en="Early beta access" data-ru="Ранний доступ к бете">Early beta access</span>
+          <span data-en="First access to beta & new features" data-ru="Первый доступ к бете и новым фичам">First access to beta &amp; new features</span>
         </span>
         <span class="perk">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span data-en="Direct feedback channel" data-ru="Прямой канал обратной связи">Direct feedback channel</span>
+          <span data-en="Your feedback shapes the product" data-ru="Твои идеи влияют на продукт">Your feedback shapes the product</span>
         </span>
       </div>
       <form class="waitlist-form-founding" id="founding-form" onsubmit="submitForm(event, 'founding')">
